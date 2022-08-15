@@ -37,28 +37,4 @@ if __name__ == "__main__":
     app.run(host = 'localhost', port = 5001, debug = False)
 
 
-# In[22]:
-
-
-from flask import Flask,render_template,request
-app=Flask(__name__)
-
-
-# In[23]:
-
-
-from flask import Flask,render_template,request
-import joblib
-
-
-# In[ ]:
-
-
-@app.route('/',methods=["GET","POST"])
-def i():
-    if request.method == "POST":
-        num=request.from.get("rates")
-        print(num)
-        model=joblib.load("DBS Regresssion Model")
-        pred
 
