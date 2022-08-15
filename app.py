@@ -1,21 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[9]:
-
-
 from flask import Flask,render_template,request
-
-
-# In[10]:
-
-
 app=Flask(__name__)
-
-
-# In[11]:
-
-
 @app.route('/',methods=["GET","POST"])
 def index():
     if request.method == "POST":
@@ -28,13 +12,5 @@ def index():
         return(render_template("index.html", result1=r1,result2=r2))
     else:
         return(render_template("index.html", result1="waiting",result2="waiting"))
-
-
-# In[ ]:
-
-
 if __name__ == "__main__":
     app.run(host = 'localhost', port = 5001, debug = False)
-
-
-
